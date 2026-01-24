@@ -1,0 +1,99 @@
+建築タイプ診断！！
+
+このサイトはあなたに適性のある住宅を診断するためのサイトです。
+
+<%= form_tag(house_result_path, method: :get) do %>
+
+<h3>Q.1 あなたはインドアはですかそれともアウトドア派ですか？</h3>
+        <label>
+            <%= radio_button_tag :hobby, "1" %> とてもインドア寄りである
+        </label>
+        <label>
+            <%= radio_button_tag :hobby, "2" %> どちらかといえばインドアである
+        </label>
+        <label>
+            <%= radio_button_tag :hobby, "3" %> とてもアウトドア寄りである
+        </label>
+        <label>
+            <%= radio_button_tag :hobby, "4" %> どちらかといえばアウトドア寄りである
+        </label>
+
+        <h3>Q.2 あなたにとって安心できる場所は？</h3>
+        <label>
+            <%= radio_button_tag :place, "1" %> 誰かの気配を感じられる場所
+        </label>
+        <label>
+            <%= radio_button_tag :place, "2" %> 完全にひとりになれる場所
+        </label>
+        <label>
+            <%= radio_button_tag :place, "3" %> 景色や光を感じれる場所
+        </label>
+        <label>
+            <%= radio_button_tag :place, "4" %> 暗めで包み込まれる空間
+        </label>
+
+        <h3>Q.3 他人に対する距離感は？</h3>
+
+        <label>
+            <%= radio_button_tag :distance, "1" %> 家に招くのが好き
+        </label>
+        <label>
+            <%= radio_button_tag :distance, "2" %> 人が来ると少し緊張するがうれしい
+        </label>
+        <label>
+            <%= radio_button_tag :distance, "3" %> 親しい人だけ来てほしい
+        </label>
+        <label>
+            <%= radio_button_tag :distance, "4" %> 人が来ると少し緊張するがうれしい
+        </label>
+
+        <h3>Q.4 ストレスがたまった時の理想の退避場所は？</h3>
+
+        <label>
+            <%= radio_button_tag :stress, "1" %> 外に抜けられるテラス
+        </label>
+        <label>
+            <%= radio_button_tag :stress, "2" %>　柔らかい照明のリビング
+        </label>
+        <label>
+            <%= radio_button_tag :stress, "3" %> 完全防音の書斎
+        </label>
+        <label>
+            <%= radio_button_tag :stress, "4" %> 寝室のベッドの中
+        </label>
+
+
+        <h3>Q.5 一日の終わりに求める空間は？</h3>
+
+        <label>
+            <%= radio_button_tag :endoftheday, "1" %> 明るさの残るリビングでリフレッシュ
+        </label>
+        <label>
+            <%= radio_button_tag :endoftheday, "2" %>　落ち着いた照明の部屋でまったり
+        </label>
+        <label>
+            <%= radio_button_tag :endoftheday, "3" %> 静かな書斎で一息
+        </label>
+        <label>
+            <%= radio_button_tag :endoftheday, "4" %> ベッドで包まれるように休みたい
+        </label>
+
+        <h3>Q.6 自分の「集中モード」に入りやすい環境は？</h3>
+
+        <label>
+            <%= radio_button_tag :shuchu, "1" %> カフェのような少しざわついた空間
+        </label>
+        <label>
+            <%= radio_button_tag :shuchu, "2" %>　自然光が入る明るい空間
+        </label>
+        <label>
+            <%= radio_button_tag :shuchu, "3" %> 完全に静かな部屋
+        </label>
+        <label>
+            <%= radio_button_tag :shuchu, "4" %> 照明を落とした暗めの部屋
+        </label>
+
+        <%= submit_tag "診断する" %>
+    
+  <% end %>
+
